@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Login from './components/Login'
+import Logout from './components/Logout'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Profile from './components/Profile'
+import { Nav } from 'react-bootstrap';
+import { withAuth0 } from '@auth0/auth0-react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import NavPar from './components/NavPar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export class App extends Component {
+  render() {
+    return (
+      <div>
+        <NavPar />
+        
+        <Router>
+            <Switch>
+              <Route exact path="/Profile" >
+                <Profile/>
+              </Route>
+
+            </Switch>
+          </Router>
+      </div>
+      
+    )
+  }
 }
 
-export default App;
+export default withAuth0(App)
