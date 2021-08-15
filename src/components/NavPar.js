@@ -20,7 +20,7 @@ export class NavPar extends Component {
       <div>
         
         <Nav variant="pills"  className="navbar navbar-dark bg-dark">
-          <div style={{ marginLeft: "1rem" }}>{this.props.auth0.isAuthenticated ?
+          <div style={{ marginLeft: "1.5rem" }}>{this.props.auth0.isAuthenticated ?
             <Logout /> :
             <Login />
           }</div>
