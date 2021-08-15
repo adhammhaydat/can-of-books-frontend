@@ -1,11 +1,23 @@
-# Start your own "Can of Books" App
+# CAN-OFBOOKS-FRONTEND
 
-This repository has starter code to begin work on creating your own online bookshelf.
+**Author**: ADHAM MHAYDTA
+**Version**: 1.0.0 
 
-## What can books do?
+## Overview
+this app to training on authantecation 
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+## Getting Started
+all onformation descraiped her [https://trello.com/b/Q1AgZCNc/third-week]
 
-## Use this template
+## Credit and Collaborations
+i worked about this project alon
 
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
+Name of feature: login by using your google acount
+
+Estimate of time needed to complete: 5 hours
+
+Start time: 8pm
+
+Finish time: 12pm
+
+Actual time needed to complete: 4hours
