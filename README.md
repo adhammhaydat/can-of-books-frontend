@@ -12,7 +12,7 @@ all onformation descraiped her [https://trello.com/b/Q1AgZCNc/third-week]
 ## Credit and Collaborations
 i worked about this project alon
 
-Name of feature: login by using your google acount
+### Name of feature: login by using your google acount
 
 Estimate of time needed to complete: 5 hours
 
@@ -21,3 +21,13 @@ Start time: 8pm
 Finish time: 12pm
 
 Actual time needed to complete: 4hours
+
+### Name of feature:using JWT
+
+Estimate of time needed to complete: 4 hours
+
+Start time:8pm
+
+Finish time:2Am
+
+Actual time needed to complete: 6hours
