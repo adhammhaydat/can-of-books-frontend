@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import { Auth0Provider } from '@auth0/auth0-react';
 
-const dome= 'dev-8365axvp.us.auth0.com'
-const clint="AokBZMisZIJscU161t1mO895UIT9xH2O"
+// const dome= 'dev-8365axvp.us.auth0.com'
+// const clint="AokBZMisZIJscU161t1mO895UIT9xH2O"
 // TODO: wrap everything in Auth0
 ReactDOM.render(
   

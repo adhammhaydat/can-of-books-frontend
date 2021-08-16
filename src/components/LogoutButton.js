@@ -5,6 +5,7 @@ const LogoutButton = () => {
   const { logout } = useAuth0();
 
   return (
+    
     <button
       style={{
         float: "right",
