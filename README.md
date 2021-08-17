@@ -31,3 +31,13 @@ Start time:8pm
 Finish time:2Am
 
 Actual time needed to complete: 6hours
+
+### Name of feature:make a user to able to add and delete books
+
+Estimate of time needed to complete: 4 hours
+
+Start time:8pm
+
+Finish time:2Am
+
+Actual time needed to complete: 6hours
