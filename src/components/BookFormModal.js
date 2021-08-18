@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import DisplayNew from "./DisplayNew";
 import AboutBooks from "./AboutBooks";
+import InputForm from "./InputForm";
 
 export class BookFormModal extends Component {
   constructor(props) {
@@ -10,7 +11,10 @@ export class BookFormModal extends Component {
       title: "",
       desc: "",
       status: "",
+      email: "",
       bookData: [],
+      showUpdateForm: false,
+      userId: "",
     };
   }
   handlerTitel = (e) => {
@@ -44,20 +48,18 @@ export class BookFormModal extends Component {
     axios(config).then((result) => {
       console.log(result.data);
       let bookData = this.state.bookData;
-      bookData.push(result.data.aboutBooks);
+      bookData.push(result.data);
       this.setState({
         bookData: bookData,
       });
     });
   };
-  deleteUser = (userId) => {
-    let config = {
-      method: "delete",
-      baseURL: "http://localhost:8000",
-      url: `/user-delete/${userId}`,
-    };
-    axios(config).then((result) => console.log());
+  handlerEmail = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
   };
+ 
   render() {
     return (
       <div>
@@ -87,13 +89,22 @@ export class BookFormModal extends Component {
               this.handlerStutus(e);
             }}
           />
+          <input
+            type="text"
+            placeholder="enter the Email"
+            onChange={(e) => {
+              this.handlerEmail(e);
+            }}
+          />
           <input type="submit" />
         </form>
-        {/* <AboutBooks deleteUser={this.deleteUser}/> */}
+        
+
         <DisplayNew
           title={this.state.title}
           discription={this.state.disc}
           status={this.state.status}
+          email={this.state.email}
         />
       </div>
     );

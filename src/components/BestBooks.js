@@ -7,6 +7,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 import AboutBooks from "./AboutBooks";
 import BookFormModal from "./BookFormModal";
 import DisplayNew from "./DisplayNew";
+import InputForm from "./InputForm";
 
 class MyFavoriteBooks extends React.Component {
   constructor(props) {
@@ -41,15 +42,50 @@ class MyFavoriteBooks extends React.Component {
       // console.log(this.state.books)
     });
   };
+  deleteUser = (userId) => {
+    console.log("start");
+    let config = {
+      method: "delete",
+      baseURL: "http://localhost:8000",
+      url: `/user-delete/${userId}`,
+    };
+    axios(config).then((result) => console.log("delete user"));
+    console.log("end");
+  };
+
+  showUpdateForm = (email, title, discription, userId, status) => {
+    this.setState({
+      showUpdateForm: true,
+      email: email,
+      title: title,
+      desc: discription,
+      userId: userId,
+      status: status,
+    });
+  };
   render() {
     return (
       <Jumbotron>
         <h1>My Favorite Books</h1>
         <p>This is a collection of my favorite books</p>
-        {this.state.books && <AboutBooks books={this.state.books} />}
+        <BookFormModal />
+        {this.state.showUpdateForm && (
+          <InputForm
+            email={this.state.email}
+            discription={this.state.desc}
+            title={this.state.title}
+            userId={this.state.userId}
+            status={this.state.status}
+          />
+        )}
+        {this.state.books && (
+          <AboutBooks books={this.state.books} deleteUser={this.deleteUser}  showUpdateForm={this.showUpdateForm}/>
+          
+        )}
+       
         <div>
-          <BookFormModal />
-          <DisplayNew/>
+          
+          <DisplayNew />
         </div>
       </Jumbotron>
     );
