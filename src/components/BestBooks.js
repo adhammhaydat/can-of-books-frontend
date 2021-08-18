@@ -5,6 +5,8 @@ import "./BestBooks.css";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
 import AboutBooks from "./AboutBooks";
+import BookFormModal from "./BookFormModal";
+import DisplayNew from "./DisplayNew";
 
 class MyFavoriteBooks extends React.Component {
   constructor(props) {
@@ -45,7 +47,10 @@ class MyFavoriteBooks extends React.Component {
         <h1>My Favorite Books</h1>
         <p>This is a collection of my favorite books</p>
         {this.state.books && <AboutBooks books={this.state.books} />}
-        <div></div>
+        <div>
+          <BookFormModal />
+          <DisplayNew/>
+        </div>
       </Jumbotron>
     );
   }

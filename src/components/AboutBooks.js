@@ -19,7 +19,9 @@ export class AboutBooks extends Component {
                         <h3>{ele.status}</h3>
                         <Button
                           id={ele._id}
-                          onClick={(e) => console.log(e.target.id)}
+                          onClick={(e) => {
+                            this.props.deleteUser(e.target.id);
+                          }}
                         >
                           delete
                         </Button>
